@@ -5,7 +5,7 @@ import Dragger from "antd/es/upload/Dragger";
 import { InboxOutlined } from "@ant-design/icons";
 import { motion } from "framer-motion";
 import { Upload } from "antd";
-import axios from "axios";
+import { api } from "../api/api";
 
 export const UploadPage = () => {
   const handleBeforeUpload = (file: { type: string }) => {
@@ -16,34 +16,20 @@ export const UploadPage = () => {
     return true;
   };
 
-  const postUpload = async (file: File) => {
+  const handleUpload = async (file: File, onSuccess?: (body: any) => void) => {
     const formData = new FormData();
     formData.append("file", file);
 
     try {
-      const response = await axios.post("/upload/", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await api.postUpload(formData);
       toast.success("Файл успешно загружен!");
       console.log(response.data);
-      return response.data;
-    } catch (error) {
-      console.error("Ошибка при загрузке файла:", error);
-      toast.error("Произошла ошибка при загрузке файла.");
-      throw error;
-    }
-  };
-
-  const handleUpload = async (file: File, onSuccess?: (body: any) => void) => {
-    try {
-      const responseData = await postUpload(file);
       if (onSuccess) {
-        onSuccess(responseData);
+        onSuccess(response.data);
       }
     } catch (error) {
       console.error("Ошибка при загрузке файла:", error);
+      toast.error("Произошла ошибка при загрузке файла.");
     }
   };
 
