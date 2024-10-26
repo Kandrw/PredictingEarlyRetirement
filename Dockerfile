@@ -34,8 +34,14 @@ RUN pip3.9 install jupyter
 RUN python3.9 -m pip install --upgrade pip
 # COPY mlp/requirements.txt ./mlp/requirements.txt
 COPY mlp ./mlp
+COPY Backend ./Backend
 RUN pip3.9 install --no-cache-dir -r mlp/requirements.txt
-# RUN pip3.9 install -r mlp/requirements.txt
+
+RUN pip3.9 install --no-cache-dir -r Backend/requirements.txt
+
+RUN apt-get install -y libssl-dev
+# RUN apt-get install build-essential checkinstall
+RUN apt install nodejs npm
 
 EXPOSE 8888
 
