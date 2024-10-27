@@ -1,0 +1,26 @@
+[
+  {
+    "clnt_id": "2001",
+    "gndr": "Женский",
+    "brth_yr": 1982,
+    "city": "Уфа",
+    "accnt_bgn_date": "2016-03-10",
+    "erly_pnsn_flg": true
+  },
+  {
+    "clnt_id": "2002",
+    "gndr": "Мужской",
+    "brth_yr": 1976,
+    "city": "Казань",
+    "accnt_bgn_date": "2011-11-20",
+    "erly_pnsn_flg": false
+  },
+  {
+    "clnt_id": "2003",
+    "gndr": "Женский",
+    "brth_yr": 1995,
+    "city": "Челябинск",
+    "accnt_bgn_date": "2021-07-15",
+    "erly_pnsn_flg": true
+  }
+]

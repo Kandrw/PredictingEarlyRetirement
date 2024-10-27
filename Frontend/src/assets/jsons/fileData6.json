@@ -1,0 +1,26 @@
+[
+  {
+    "clnt_id": "6001",
+    "gndr": "Мужской",
+    "brth_yr": 1965,
+    "city": "Саратов",
+    "accnt_bgn_date": "2010-08-30",
+    "erly_pnsn_flg": false
+  },
+  {
+    "clnt_id": "6002",
+    "gndr": "Женский",
+    "brth_yr": 1992,
+    "city": "Сочи",
+    "accnt_bgn_date": "2022-01-10",
+    "erly_pnsn_flg": true
+  },
+  {
+    "clnt_id": "6003",
+    "gndr": "Мужской",
+    "brth_yr": 1981,
+    "city": "Владивосток",
+    "accnt_bgn_date": "2017-03-05",
+    "erly_pnsn_flg": false
+  }
+]
