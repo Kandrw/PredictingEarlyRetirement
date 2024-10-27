@@ -25,6 +25,7 @@ while getopts "crsaf" OPTION; do
     f)
         cd Frontend
         npm run dev
+    ;;
 	*)
 		echo "Incorrect option"
 	;;

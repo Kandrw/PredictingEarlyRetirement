@@ -13,19 +13,29 @@ import lightgbm as lgb
 from xgboost import XGBClassifier
 from sklearn.tree import DecisionTreeClassifier
 
+
+FP1 = 'test_data/trnsctns_ops_tst.csv'
+
+FP2 = 'test_data/cntrbtrs_clnts_ops_tst.csv'
+
+FP3 = 'processed_data.csv'
+
+FP4 = 'test_data/sample_submission.csv'
+
+
 # Чтение CSV-файла в исходной кодировке, например 'cp1251'
-df = pd.read_csv('train_data/trnsctns_ops_trn.csv', encoding='cp1251')
+df = pd.read_csv(FP1)
 
 # Сохранение в новой кодировке, например 'utf-8'
-df.to_csv('train_data/trnsctns_ops_trn.csv', encoding='utf-8', index=False)
+df.to_csv(FP1, encoding='utf-8', index=False)
 
 # Чтение CSV-файла в исходной кодировке, например 'cp1251'
-df = pd.read_csv('train_data/cntrbtrs_clnts_ops_trn.csv', encoding='cp1251',sep=";")
+df = pd.read_csv(FP2)
 
 # Сохранение в новой кодировке, например 'utf-8'
-df.to_csv('train_data/cntrbtrs_clnts_ops_trn.csv', encoding='utf-8', index=False)
+df.to_csv(FP2, encoding='utf-8', index=False)
 
-df = pd.read_csv('train_data/cntrbtrs_clnts_ops_trn.csv',encoding="utf-8")
+df = pd.read_csv(FP2,encoding="utf-8")
 #df = df.drop(columns=['Unnamed: 0'], errors='ignore')
 #df = df.drop_duplicates()
 #df = df.dropna()
@@ -79,9 +89,6 @@ df_final = df_final.apply(pd.to_numeric, errors='coerce').fillna(0)
 
 # Проверяем, что все значения числовые, и заменяем любые NaN на 0
 df_final = df_final.apply(pd.to_numeric, errors='coerce').fillna(0)
-df_final.to_csv('processed_data.csv', encoding='utf-8', index=False)
+df_final.to_csv(FP3, encoding='utf-8', index=False)
 
-# Этап 9: Генерация отчета с помощью ydata-profiling
-profile = ProfileReport(df_final, title='Pandas Profiling Report', explorative=True)
-profile.to_file("output_report.html")  # Сохраните отчет в HTML
 
