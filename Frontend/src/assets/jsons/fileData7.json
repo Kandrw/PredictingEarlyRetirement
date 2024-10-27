@@ -1,0 +1,26 @@
+[
+  {
+    "clnt_id": "7001",
+    "gndr": "Женский",
+    "brth_yr": 1987,
+    "city": "Краснодар",
+    "accnt_bgn_date": "2019-05-15",
+    "erly_pnsn_flg": false
+  },
+  {
+    "clnt_id": "7002",
+    "gndr": "Мужской",
+    "brth_yr": 1995,
+    "city": "Екатеринбург",
+    "accnt_bgn_date": "2021-09-22",
+    "erly_pnsn_flg": true
+  },
+  {
+    "clnt_id": "7003",
+    "gndr": "Женский",
+    "brth_yr": 1983,
+    "city": "Нижний Новгород",
+    "accnt_bgn_date": "2020-12-31",
+    "erly_pnsn_flg": false
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "clnt_id": "3001",
+    "gndr": "Мужской",
+    "brth_yr": 1970,
+    "city": "Самара",
+    "accnt_bgn_date": "2013-09-01",
+    "erly_pnsn_flg": false
+  },
+  {
+    "clnt_id": "3002",
+    "gndr": "Женский",
+    "brth_yr": 1988,
+    "city": "Ростов-на-Дону",
+    "accnt_bgn_date": "2019-05-21",
+    "erly_pnsn_flg": true
+  }
+]

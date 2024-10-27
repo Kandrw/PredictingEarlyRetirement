@@ -1,0 +1,58 @@
+[
+  {
+    "clnt_id": "1001",
+    "gndr": "Мужской",
+    "brth_yr": 1980,
+    "city": "Москва",
+    "accnt_bgn_date": "2015-06-12",
+    "erly_pnsn_flg": true
+  },
+  {
+    "clnt_id": "1002",
+    "gndr": "Женский",
+    "brth_yr": 1975,
+    "city": "Санкт-Петербург",
+    "accnt_bgn_date": "2010-04-23",
+    "erly_pnsn_flg": false
+  },
+  {
+    "clnt_id": "1003",
+    "gndr": "Мужской",
+    "brth_yr": 1968,
+    "city": "Новосибирск",
+    "accnt_bgn_date": "2012-08-15",
+    "erly_pnsn_flg": true
+  },
+  {
+    "clnt_id": "1004",
+    "gndr": "Женский",
+    "brth_yr": 1990,
+    "city": "Екатеринбург",
+    "accnt_bgn_date": "2020-01-10",
+    "erly_pnsn_flg": false
+  },
+  {
+    "clnt_id": "1005",
+    "gndr": "Мужской",
+    "brth_yr": 1985,
+    "city": "Нижний Новгород",
+    "accnt_bgn_date": "2018-07-08",
+    "erly_pnsn_flg": true
+  },
+  {
+    "clnt_id": "1006",
+    "gndr": "Женский",
+    "brth_yr": 1972,
+    "city": "Казань",
+    "accnt_bgn_date": "2009-11-25",
+    "erly_pnsn_flg": false
+  },
+  {
+    "clnt_id": "1007",
+    "gndr": "Мужской",
+    "brth_yr": 1960,
+    "city": "Челябинск",
+    "accnt_bgn_date": "2005-03-14",
+    "erly_pnsn_flg": true
+  }
+]
