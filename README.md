@@ -90,10 +90,10 @@
 
 ### Использование
 
-<img src= "https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/2.png">
+<img src= "assets/2.png">
 
-<img src= "https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/3.png">
+<img src= "assets/3.png">
 
-<img src= "https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/4.png">
+<img src= "assets/4.png">
 
-<img src= "https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/5.png">
+<img src= "assets/5.png">
