@@ -23,23 +23,46 @@ from django.core.files.base import ContentFile
 from PredictingEarlyRetirement_functional.models import ImageModel
 from django.core.files.uploadedfile import InMemoryUploadedFile
 
-
-
-
-class ImageUploadView(APIView):
-    parser_classes = (MultiPartParser, FormParser)
-
-    def post(self, request, *args, **kwargs):
-        serial_number = request.data.get('serial_number')
-        images = request.FILES.getlist('images')
-        print("TEST - views.py:35")
-
-
+from django.conf import settings
 
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from django.core.files.storage import default_storage
 from docx import Document
+
+class ImageUploadView(APIView):
+    parser_classes = (MultiPartParser, FormParser)
+
+    def post(self, request, *args, **kwargs):
+        csv_file = request.FILES.get('file')
+        
+        # Проверка на наличие файла и его расширение
+        if not csv_file or not csv_file.name.endswith('.csv'):
+            return Response({"error": "Пожалуйста, загрузите файл в формате .csv."}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Путь для сохранения загруженного файла
+        upload_dir = os.path.join(settings.MEDIA_ROOT, 'files')
+        os.makedirs(upload_dir, exist_ok=True)  # Создание директории, если она не существует
+
+        file_path = os.path.join(upload_dir, csv_file.name)
+        print(file_path)
+        # Сохранение файла
+        with open(file_path, 'wb+') as destination:
+            for chunk in csv_file.chunks():
+                destination.write(chunk)
+
+        return Response({"message": "Файл успешно загружен!", "file_path": file_path}, status=status.HTTP_201_CREATED)
+
+class FileListView(APIView):
+    def get(self, request, *args, **kwargs):
+        # Путь к директории с файлами
+        directory = os.path.join(settings.MEDIA_ROOT, 'files')
+        try:
+            # Получение списка файлов в директории
+            files = [f for f in os.listdir(directory) if f.endswith('.csv')]
+            return Response({"files": files}, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(['POST'])
 def submit_report(request):
