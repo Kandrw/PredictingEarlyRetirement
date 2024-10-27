@@ -5,3 +5,8 @@ scikit-learn
 matplotlib
 seaborn
 psycopg2
+xgboost
+lightgbm
+category_encoders
+ydata_profiling
+shap
