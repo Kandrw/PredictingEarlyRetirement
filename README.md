@@ -81,12 +81,19 @@
 ```
 
 * флаг -s необходим для сборки контейнера, он запустит докер и начнет загружать библиотеки, это необходимо сделать 1 раз
-* флаг -с запускает ускоренную пересборку контейнера, если уже до этого сборка осуществлялась
-* флаг -r запускает контейнер
-* флаг -b запускает jupyter в контейнере
+* флаг -с запускает ускоренную пересборку контейнера, если уже до этого сборка осуществлялась и 
+надо просто доустановить библиотеку
+* флаг -r запускает jupyter
+* флаг -b запускает сервис
 
 Далее необходимо будет скопировать из ссылку на юпитер и вставим ее в браузере, то у нас откроется наш файл `sample.ipynb`
 
 ### Использование
 
-![изображение](https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/1.png)
+<img src= "https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/2.png">
+
+<img src= "https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/3.png">
+
+<img src= "https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/4.png">
+
+<img src= "https://github.com/Kandrw/PredictingEarlyRetirement/tree/main/assets/5.png">
