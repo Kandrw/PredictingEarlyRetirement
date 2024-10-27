@@ -13,6 +13,10 @@ export const api = {
     });
     return response;
   },
+  async getFileList() {
+    const response = await instance.get("/files/");
+    return response.data;
+  },
   async postReport(serialNumber: string, defects: object) {
     const response = await instance.post(
       "/submit-report/",
